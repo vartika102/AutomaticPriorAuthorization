@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Contact V2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico/' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+    <div class="bg-contact2" style="background-image: url({% static 'images/bg-01.jpg' %});">
+        <div class="container-contact2">
+			<div class="wrap-contact2">
+                <h3>
+                	<center><b>RESULT OF PRIOR AUTHORIZATION</b></center>
+                </h3><br>
+				<table style="width:80%">
+  					<tr>
+						<td><b>PATIENT'S NAME:</b></td>
+						<td>{{patient.name}}</td>
+					</tr>
+					<tr>
+						<td><b>PATIENT'S ID:</b></td>
+						<td>{{patient.p_id}}</td>
+					</tr>
+					<tr>
+						<td><b>STATUS:</b></td>
+						<td>{{patient.result}}</td>
+					</tr>
+					<tr>
+						<td><b>AMOUNT REQUESTED:</b></td>
+						<td>{{patient.pre_med_cost}}</td>
+					</tr>
+					<tr>
+						<td><b>AMOUNT APPROVED:</b></td>
+						<td>{{patient.amt_paid_insurance}}</td>
+					</tr>
+					<tr>
+						<td><b>AMOUNT TO BE PAID BY THE PATIENT:</b></td>
+						<td>{{patient.amt_out_of_pocket}}</td>
+					</tr>
+					
+					</table>
+            <br>
+				<h3>
+                	<center><b>PLAN DETAILS</b></center>
+                	</h3>
+				<table style="width:80%">
+  					<tr>
+						<td><b>PLAN NAME:</b></td>
+						<td>{{patient.plan}}</td>
+					</tr>
+					<tr>
+						<td><b>COINSURANCE RATE:</b></td>
+						<td>{{patient.coins}}</td>
+					</tr>
+					<tr>
+						<td><b>MAXIMUM COINSURANCE OUT OF POCKET:</b></td>
+						<td>{{patient.max_coins}}</td>
+					</tr>
+				</table><br>
+				<h3>
+                	<center><b>MODEL OUTPUT = {{patient.output}}</b></center>
+                </h3>
+				</div>
+            </div>
+			<br>
+        </div>
+    </div>
+
+</body>
+</html>

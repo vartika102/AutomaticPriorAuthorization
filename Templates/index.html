@@ -1,0 +1,383 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico/' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-contact2" style="background-image: url({% static 'images/bg-01.jpg' %});">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<center><h1>PRIOR AUTHORIZATION</h1></center>
+				<div><br>
+
+					{% for message in messages %}
+					<p style="color:red">* {{ message }} </p>
+					{% endfor %}
+				</div>
+				<br>
+				<br>
+				<form class="contact2-form validate-form" action="calc" method="post">
+
+					{% csrf_token %}
+
+					<span class="contact2-form-title">
+						Patient's Details
+					</span>
+					
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label for="name">PATIENT'S NAME</label>
+						<input class="input2" type="text" id="name" name="name" required>
+						<span class="focus-input2" ></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<label for="p_id">PATIENT'S ID</label>
+						<input class="input2" type="text" id="p_id" name="p_id" required>
+						<span class="focus-input2"></span>
+					</div>
+	
+					
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<label>AGE</label>
+						<input class="input2" type="text" name="age" required>
+						<span class="focus-input2" ></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<label>HEIGHT</label>
+						<input class="input2" type="text" name="height" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<label>WEIGHT</label>
+						<input class="input2" type="text" name="weight" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input" data-validate = "Message is required">
+						<label>GENDER</label>
+						<span class="focus-input2"></span><br>
+						<input type="radio" id="male" name="gender" value="0" required>
+						<label for="male">Male</label>
+						<input type="radio" id="female" name="gender" value="1">
+						<label for="female">Female</label>
+					</div>
+					<br><br>
+
+					<!--<div class="wrap-input" data-validate = "Message is required">
+						<label>INSURANCE PLAN</label>
+						<span class="focus-input2"></span><br>
+						<input type="radio" id="hp_basic" name="plan" value="hp_basic" required>
+						<label for="hp_basic">Basic</label>
+						<input type="radio" id="hp_platinum" name="plan" value="hp_platinum">
+						<label for="hp_platinum">Platinum</label>
+						<input type="radio" id="hp_gold" name="plan" value="hp_gold">
+						<label for="hp_gold">Gold</label>
+						<br>
+					</div> 
+					<br>-->
+					
+					<!--<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="ADDICTIVE"></span><br>
+						<input type="radio" id="yes_add" name="addictive" value="1">
+						<label for="yes_add">YES</label>
+						<input type="radio" id="no_add" name="addictive" value="0">
+						<label for="no_add">NO</label>
+					</div> -->
+
+					<br>
+
+					<span class="contact2-form-title">
+						Medication details
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>PRESCRIBED TREATMENT</label>
+						<input class="input2" type="text" name="pre_treat" required>
+						<span class="focus-input2"></span>
+					</div>
+					
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>PRESCRIBED TREATMENT COST</label>
+						<input class="input2" type="text" name="pre_treat_cost" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>PRESCRIBED DRUG</label>
+						<input class="input2" type="text" name="pre_drug" required>
+						<span class="focus-input2"></span>
+					</div>
+					
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>PRESCRIBED DRUG COST</label>
+						<input class="input2" type="text" name="pre_drug_cost" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<!--<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="alter_med_cost">
+						<span class="focus-input2" data-placeholder="ALTERNATE MEDICATION COST"></span>
+					</div> -->
+
+					<!-- <div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="insurance_amount">
+						<span class="focus-input2" data-placeholder="INSURANCE AMOUNT"></span>
+					</div> -->
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>STRENGTH (mg)</label>
+						<input class="input2" type="text" name="strength" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>DOSAGE (per day)</label>
+						<input class="input2" type="text" name="dosage" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>LENGTH OF TREATMENT</label>
+						<input class="input2" type="text" name="len_of_therapy" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<label>DOCTOR'S YEARS OF EXPERIENCE</label>
+						<input class="input2" type="text" name="doc_exp" required>
+						<span class="focus-input2"></span>
+					</div>
+
+					<div class="wrap-input" data-validate = "Message is required">
+						<label>THERAPY INITIATED</label>
+						<span class="focus-input2"></span><br>
+						<input type="radio" id="yes_init" name="therapy_initiated" value="1" required>
+						<label for="yes_init">YES (if the treatment has been already initiated)</label><br>
+						<input type="radio" id="no_init" name="therapy_initiated" value="0">
+						<label for="no_init">NO (if the treatment has not been initiated yet)</label>
+					</div>
+					<br>
+					<br>
+
+					<div class="wrap-input" data-validate = "Message is required">
+						<label>PREVIOUS MEDICATION IMPROVEMENT</label>
+						<span class="focus-input2"></span><br>
+						<input type="radio" id="yes_pmi" name="prev_med_imp" value="1" required>
+						<label for="yes_pmi">YES (if there was any improvement from the previous treatment)</label><br>
+						<input type="radio" id="no_pmi" name="prev_med_imp" value="0">
+						<label for="no_pmi">NO (if there was no improveemnt from the previous treatment)</label>
+					</div>
+					<br>
+					<br>
+
+					<div class="wrap-input" data-validate = "Message is required">
+						<label>SIDE EFFECTS</label>
+						<span class="focus-input2"></span><br>
+						<input type="radio" id="side_eff" name="side_effects" value="1" required>
+						<label for="side_eff">YES (if the previous treatment caused any side effects)</label><br>
+						<input type="radio" id="side_eff" name="side_effects" value="0">
+						<label for="side_eff">NO (if the previous treatment did not cause any side effects)</label>
+					</div>
+					<br>
+					<br>
+
+					
+					<!-- <div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="REAUTHORIZATION"></span><br>
+						<input type="radio" id="yes_reauth" name="reauth" value="1">
+						<label for="yes_reauth">YES</label>
+						<input type="radio" id="no_reauth" name="reauth" value="0">
+						<label for="no_reauth">NO</label>
+					</div> -->
+
+					<!-- <div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<input class="input2" type="text" name="age">
+						<span class="focus-input2" data-placeholder="AGE"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<input class="input2" type="text" name="height">
+						<span class="focus-input2" data-placeholder="HEIGHT"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<input class="input2" type="text" name="weight">
+						<span class="focus-input2" data-placeholder="WEIGHT"></span>
+					</div> -->
+
+					<br>
+
+					<!--- <span class="contact2-form-title">
+						Medication details
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Disease is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="TREATMENT"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="PRESCIBED DRUG"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="PRESCRIBED MEDICATION COST"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="DOCTOR'S YEARS OF EXPERIENCE"></span>
+					</div>
+
+					<span class="contact2-form-title">
+						Rest details
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="GENERIC DRUG"></span>
+					</div>
+					
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="SPECIALITY"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="INSURANCE AMOUNT"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="ALTERNATE MEDICATION COST"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="STRENGTH(mg)"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="DOSAGE"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="LENGTH OF TREATMENT"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="INSURANCE PLAN"></span>
+					</div>
+
+					<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="ADDICTIVE"></span><br>
+						<input type="radio" id="yes_add" name="yes" value="yes">
+						<label for="yes_add">YES</label>
+						<input type="radio" id="no_add" name="no" value="no">
+						<label for="no_add">NO</label>
+					</div>
+
+					<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="ALLERGIC"></span><br>
+						<input type="radio" id="yes_all" name="yes" value="yes">
+						<label for="yes_all">YES</label>
+						<input type="radio" id="no_all" name="no" value="no">
+						<label for="no_all">NO</label>
+					</div>
+
+					<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="THERAPY INITIATED"></span><br>
+						<input type="radio" id="yes_init" name="yes" value="yes">
+						<label for="yes_init">YES</label>
+						<input type="radio" id="no_init" name="no" value="no">
+						<label for="no_init">NO</label>
+					</div>
+
+					<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="REAUTHORIZATION"></span><br>
+						<input type="radio" id="yes_reauth" name="yes" value="yes">
+						<label for="yes_reauth">YES</label>
+						<input type="radio" id="no_reauth" name="no" value="no">
+						<label for="no_reauth">NO</label>
+					</div>
+
+					<div class="wrap-input2" data-validate = "Message is required">
+						<span class="focus-input2" data-placeholder="PREVIOUS MEDICATION IMPROVEMENT"></span><br>
+						<input type="radio" id="yes_pmi" name="yes" value="yes">
+						<label for="yes_pmi">YES</label>
+						<input type="radio" id="no_pmi" name="no" value="no">
+						<label for="no_pmi">NO</label>
+					</div>
+
+					-->
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn">
+								PREDICT
+							</button>
+						</div>
+					</div>
+				</form>
+
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>

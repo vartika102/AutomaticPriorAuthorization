@@ -1,0 +1,90 @@
+Pres_drug,Alt_drug,Pres_drug_cost,Alt_drug_cost,Adictive
+Docetaxel,Docetaxel,1000,255,YES
+Cytoxan,Cyclophosphamide,992,576,No
+Taxol,Paclitaxel,1000,468,NO
+Cerubidine,Daunorubicin,1000,390,YES
+Camptosar,Irinotecan generic,992,402,YES
+Abraxane,Paclitaxel,1000,289,NO
+Doxil,doxorubicin,1000,290,YES
+oncovin,VINCRISTINE,990,267,NO
+Paraplatin,Carboplatin,1000,390,YES
+Eloxatin,Oxaliplatin generic,1000,307,YES
+Thioplex,Thiotepa,984,570,NO
+Panitumumab,Vectibix,999,313,YES
+Mexate,Methotrexate,1000,477,NO
+Gemzar,Gemcitabine,983,497,NO
+Ellence,Epirubicin,999,503,YES
+Opdivo,Nivolumab,989,471,NO
+DaunoXome,Daunorubicin,896,276,YES
+Avastin,Bevacizumab,999,209,YES
+Avastin,Bevacizumab,913,368,NO
+Adriamycin,Doxorubicin ,890,227,YES
+Zykadia,Ceritinib,996,282,NO
+Rozlytrek,Entrectinib,640,423,YES
+Odomzo,Sonidegib,579,495,NO
+Aldara,Imiquimod,980,804,YES
+Apixaban,Eliquis,884,274,YES
+Dabigatran,Pradaxa,928,203,NO
+Edoxaban,Savaysa,937,559,NO
+Heparin,various,973,407,YES
+Rivaroxaban,Xarelto,946,222,NO
+Warfarin,Coumadin,838,497,YES
+Aspirin,Xarelto,863,474,YES
+Clopidogrel,Plavix,943,518,YES
+Dipyridamole,Persantine,900,270,NO
+Prasugrel,Effient,967,322,YES
+Ticagrelor,Brilinta,936,350,YES
+Benazepril ,Lotensin,904,498,NO
+Captopril,Capoten,976,495,YES
+Enalapril,Vasotec,908,486,YES
+Fosinopril,Monopril,902,456,YES
+Lisinopril,Prinivil,857,514,YES
+Moexipril,Univasc,890,271,NO
+Perindopril,Aceon,991,521,YES
+Quinapril,Accupril,908,597,NO
+Ramipril,Altace,990,236,YES
+Trandolapril,Mavik,931,534,NO
+Azilsartan,Edarbi,869,222,YES
+Candesartan,Atacand,913,422,YES
+Eprosartan,Teveten,939,279,YES
+Irbesartan,Avapro,855,534,YES
+Losartan,Cozaar,820,571,NO
+Olmesartan,Benicar,814,547,YES
+Telmisartan,Micardis,882,540,YES
+Valsartan,Diovan,885,355,NO
+Sacubitril,Entresto,836,327,NO
+Acebutolol,Sectral,901,681,NO
+Atenolol,Tenormin,897,694,NO
+Betaxolol,Kerlone,856,459,NO
+Bisoprolol,Ziac,934,590,NO
+Bisoprolol ,Zebeta,834,462,NO
+Metoprolol,Lopressor,913,334,NO
+Nadolol,Corgard,918,596,NO
+Propranolol,Inderal,930,300,NO
+Sotalol ,Betapace,823,561,NO
+Carvedilol ,Coreg,853,383,NO
+Labetalol hydrochloride,Normodyne,893,591,NO
+Amlodipine,Norvasc,870,563,NO
+Diltiazem,Cardizem,884,577,NO
+Felodipine ,Plendil,859,238,NO
+Nifedipine,Procardia,966,277,NO
+Nicotinic acids,Niacin,984,568,NO
+Ezetimibe,Zetia,877,681,NO
+Combination statin and cholesterolabsorption inhibitors: Ezetimibe,Vytorin,920,494,NO
+Digoxin,Lanoxin,897,680,NO
+Acetazolamide,Diamox,836,228,NO
+Amiloride,Midamor,928,363,NO
+Bumetanide,Bumex,968,466,NO
+Chlorothiazide,Diuril,806,669,NO
+Chlorthalidone,Hygroton,973,532,NO
+Furosemide,Lasix,945,684,NO
+Hydro-chlorothiazide,Esidrix,930,503,NO
+Indapamide,Lozol,808,612,NO
+Metalozone,Zaroxolyn,908,670,NO
+Spironolactone,Aldactone,941,647,NO
+Torsemide,Demadex,974,322,NO
+Isosorbide dinitrate,Isordil,963,276,NO
+Isosorbide mononitrate,Imdur,933,345,NO
+Hydralazine,Apresoline,819,373,NO
+Nitroglycerin,Nitro Bid,847,313,NO
+Minoxidil,Minoxidil,996,974,NO

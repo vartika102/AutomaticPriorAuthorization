@@ -1,0 +1,56 @@
+Transurethral bladder tumor resection (TURBT),3000,6000
+Radical cystectomy and lymph node dissection.,11500,12500
+Urinary diversion.,1500,1700
+Lumpectomy,4505,5000
+Mastectomy,13000,17000
+Sentinel lymph node biopsy (SLNB),10096,15223
+Axillary lymph node dissection (ALND)Ê,14000,18000
+Laparoscopic surgery,6515,9360
+Radiofrequency ablation (RFA) or cryoablation,9408,12000
+Colostomy for rectal cancer,7000,8000
+Radical nephrectomy,10521,13457
+Partial nephrectomy,1652,3000
+Laparoscopic and robotic surgery (minimally invasive surgery),1116,3000
+Lobectomy,17016,21600
+A wedge resection,51487,52500
+Segmentectomy,22000,25000
+Melanoma,4960,5000
+Glossectomy,4500,5500
+Mandibulectomy,14573,15000
+Maxillectomy,13000,22000
+Laryngectomy,17520,18000
+Transoral robotic surgery and transoral laser microsurgery,3500,4000
+Micrographic surgery,1243,1500
+Tracheostomy,50,243
+Gastrostomy tube,2420,3140
+Reconstruction,3425,4000
+Neck dissection,5110,6000
+Aortic Surgery,80000,90000
+Aortic valve surgery,80000,98000
+Arrhythimia surgery,1466,1946
+Congenital heart surgery,25499,95000
+Coronary artery bypass graft (CABG) surgery,70000,90000
+Heart transplant,800000,96000
+Left ventricular assist device (LVAD),30000,45000
+Left ventricular remodeling/ surgical ventricular restoration,65432,70000
+Myectomy/ myotomy,57000,60000
+Transmyocardial Revascularization (TMR),20000,30000
+Valvular surgery,23500,42350
+Angioplasty/ Percutaneous Coronary Interventions [PCI],20000,28200
+Stent placement,18000,20000
+heart valve replacement,80000,97000
+Atherectomy,20000,25000
+Cardiomyoplasty,20000,23000
+Minimally Invasive Heart Surgery,45000,54000
+Radiofrequency Ablation/ Catheter Ablation,42000,43000
+Transcatheter Aortic Valve Replacement (TAVR),60063,62000
+Surgical Aortic Valve Replacement (SAVR),60319,62000
+ASD Repair,20645,30962
+VSD Repair,26915,47381
+TOF Repair,34743,63808
+Fontan,39976,74640
+BDG/ Hemi-Fontan,33695,69400
+CAVC Repair,36293,80545
+ASO,70357,95000
+Truncus Repair,90189,95000
+Norwood,80000,95000
